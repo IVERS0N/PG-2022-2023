@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author alumne_2n
  */
-public class ProyectoUF1 {
+public class JavaApplication1 {
 
     private final static String MSG_1 = "Id?: ";
     private final static String MSG_2 = "Edat?: ";
@@ -21,8 +21,10 @@ public class ProyectoUF1 {
     private final static String MSG_7 = "Programa finalitzat per error en dades ";
     private static int intentos = 0;
 
+    public String tipo_venta;
     public static void main(String[] args) {
         int id, edat, tipus_venda, import_compra, tel_contacte;
+        String tipo_venta = "";
         Scanner sc = new Scanner(System.in);
 
         System.out.println(MSG_1);
@@ -65,39 +67,33 @@ public class ProyectoUF1 {
             }
         }
 
-        System.out.println("\n" + MSG_3 + "\n\nvenda lliure (0)\npensionista (1)\ncarnet jove (2)\nsoci (3)\n");
+        
+        do {
+            System.out.println("\n" + MSG_3 + "\n\nvenda lliure (0)\npensionista (1)\ncarnet jove (2)\nsoci (3)\n");
         tipus_venda = sc.nextInt();
-        if (tipus_venda >= 4 || tipus_venda <= -1) {
-            System.out.println("\n" + MSG_6 + "\n");
-        }
-        while (tipus_venda >= 4 || tipus_venda <= -1) {
-            if (intentos < 2) {
-                System.out.println("\n" + MSG_3 + "\n\nvenda lliure (0)\npensionista (1)\ncarnet jove (2)\nsoci (3)\n");
-                tipus_venda = sc.nextInt();
-                if (tipus_venda >= 4 || tipus_venda <= -1) {
-                    System.out.println("\n" + MSG_6 + "\n");
-                    intentos++;
-                }
+                
                 switch (tipus_venda) {
                     case 0:
-                        System.out.println("venda lliure");
+                        tipo_venta = "lliure";
                         break;
                     case 1:
-                        System.out.println("pensionista");
+                        tipo_venta = "pensionista";
                         break;
                     case 2:
-                        System.out.println("carnet jove");
+                        tipo_venta = "jove";
                         break;
                     case 3:
-                        System.out.println("soci");
+                        tipo_venta = "soci";
                         break;
-                }
-
-            } else if (intentos == 2) {
-                System.out.println(MSG_7);
-                return;
+                    default: System.out.println(MSG_6);
+                        break;
             }
-        }
+                intentos++;
+                if(intentos == 3){
+                    System.out.println(MSG_7);
+                    return;
+                }
+        }while(tipus_venda >= 4 || tipus_venda <= -1);
 
         System.out.println("\n" + MSG_4);
         import_compra = sc.nextInt();
@@ -139,8 +135,8 @@ public class ProyectoUF1 {
         }
         
         
-        System.out.println("\n" + "Id " + " Edat " + " Tipus " + " Import " + " Telèfon ");
-        System.out.println(id + "  " + edat + "    " + tipus_venda + "      " + import_compra + "      " + tel_contacte);
+        System.out.println("\n" + "Id\t" + "Edat\t" + "Tipus\t\t" + "Import\t" + "Telèfon\t");
+        System.out.println(id + "\t" + edat + "\t" + tipo_venta + "\t" + import_compra + "\t" + tel_contacte);
     }
-
+    
 }
