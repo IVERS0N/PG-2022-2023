@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package proyectouf1;
+package javaapplication1;
 
 import java.util.Scanner;
 
@@ -27,14 +27,14 @@ public class JavaApplication1 {
         String tipo_venta = "";
         Scanner sc = new Scanner(System.in);
 
-        System.out.println(MSG_1);
+        System.out.print(MSG_1);
         id = sc.nextInt();
         if (id >= 1000 || id <= 110) {
-            System.out.println("\n" + MSG_6 + "\n");
+            System.out.print("\n" + MSG_6 + "\n");
         }
         while (id >= 1000 || id <= 110) {
             if (intentos < 2) {
-                System.out.println(MSG_1);
+                System.out.print(MSG_1);
                 id = sc.nextInt();
                 if (id >= 1000 || id <= 110) {
                     System.out.println("\n" + MSG_6 + "\n");
@@ -47,7 +47,7 @@ public class JavaApplication1 {
             }
         }
 
-        System.out.println("\n" + MSG_2);
+        System.out.print("\n" + MSG_2);
         edat = sc.nextInt();
         if (edat >= 121 || edat <= 13) {
             System.out.println("\n" + MSG_6 + "\n");
@@ -95,14 +95,14 @@ public class JavaApplication1 {
                 }
         }while(tipus_venda >= 4 || tipus_venda <= -1);
 
-        System.out.println("\n" + MSG_4);
+        System.out.print("\n" + MSG_4);
         import_compra = sc.nextInt();
         if (import_compra >= 1001 || import_compra <= -1) {
             System.out.println("\n" + MSG_6 + "\n");
         }
         while (import_compra >= 1001 || import_compra <= -1) {
             if (intentos < 2) {
-                System.out.println("\n" + MSG_4);
+                System.out.print("\n" + MSG_4);
                 import_compra = sc.nextInt();
                 if (import_compra >= 1001 || import_compra <= -1) {
                     System.out.println("\n" + MSG_6 + "\n");
@@ -114,14 +114,14 @@ public class JavaApplication1 {
             }
         }
 
-        System.out.println("\n" + MSG_5);
+        System.out.print("\n" + MSG_5);
         tel_contacte = sc.nextInt();
         if (tel_contacte >= 1000000000 || tel_contacte <= 111111110) {
             System.out.println("\n" + MSG_6 + "\n");
         }
         while (tel_contacte >= 1000000000 || tel_contacte <= 111111110) {
             if (intentos < 2) {
-                System.out.println("\n" + MSG_5);
+                System.out.print("\n" + MSG_5);
                 tel_contacte = sc.nextInt();
                 if (tel_contacte >= 1000000000 || tel_contacte <= 111111110) {
                     System.out.println("\n" + MSG_6 + "\n");
@@ -136,7 +136,7 @@ public class JavaApplication1 {
         
         
         System.out.println("\n" + "Id\t" + "Edat\t" + "Tipus\t\t" + "Import\t" + "Telèfon\t");
-        System.out.println(id + "\t" + edat + "\t" + tipo_venta + "\t" + import_compra + "\t" + tel_contacte);
+        System.out.println(id + "\t" + edat + "\t" + tipo_venta + "\t\t" + import_compra + "\t" + tel_contacte);
     }
     
 }
