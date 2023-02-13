@@ -1,0 +1,7 @@
+
+
+Mètode | Descripció | Pros | Contres
+FileInputStream | Llegir bytes d'un fitxer | Ràpid i eficient | No pot llegir objectes directament
+FileReader | Llegir caràcters d'un fitxer | Pot llegir caràcters Unicode i s'adapta a la codificació de caràcters del sistema operatiu.  | No pot llegir bytes directament
+BufferedReader | Llegir línies d'un fitxer amb un buffer intern per a millorar el rendiment.  | Millora el rendiment de la lectura de les línies del fitxer.  | No pot llegir objectes directament.
+Scanner | Llegir tokens d'un fitxer o entrada estandard.  | Pot llegir tokens de diferents tipus com ara enters, doubles, etc.  | No pot llegir objectes directament.

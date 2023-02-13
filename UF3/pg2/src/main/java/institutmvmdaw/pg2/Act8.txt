@@ -1,0 +1,5 @@
+|Mètode | Descripció |
+| FileWriter | Permet escriure caràcters en un fitxer. |
+| PrintWriter | Permet escriure línies de text en un fitxer. |
+| BufferedWriter | Permet escriure blocs de dades en un fitxer. | 
+| DataOutputStream | Permet escriure bytes en un fitxer.  |
